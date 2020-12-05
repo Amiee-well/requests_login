@@ -130,21 +130,6 @@ class qqmusicScanqr():
         self.xlogin_url = 'https://xui.ptlogin2.qq.com/cgi-bin/xlogin?'
         self.ptqrlogin_url = 'https://ssl.ptlogin2.qq.com/ptqrlogin?'
         self.session.headers.update(self.headers)
-# qq_login = qqmusicScanqr()
-# session = qq_login.login()
-# print(session)
-session = requests.Session()
-params = {
-    'appid': '716027609',
-    'e': '2',
-    'l': 'M',
-    's': '3',
-    'd': '72',
-    'v': '4',
-    't': str(random.random()),
-    'daid': '383',
-    'pt_3rd_aid': '100497308',
-}
-response = session.get('https://ssl.ptlogin2.qq.com/ptqrshow?', params=params)
-cookie = session.cookies
-print(cookie)
+qq_login = qqmusicScanqr()
+session = qq_login.login()
+print(session)
